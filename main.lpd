@@ -1,0 +1,29 @@
+using *;
+
+namespace JD {
+  running SYSTEM CALLED jd {
+    run FTP in java {
+      java.create.file("system-caller.cfg",
+      INPUT(With JDK):"system.call = cfg EXECUTOR lib provider.claim place 364WIN!");
+      void JD-MAIN {
+        create BOOLEAN startedup = false;
+        
+      }
+      
+      void Update() {
+        if(File.Name("JEngine-editor.exe").build = true) {
+          if(File.name("JEngine-editor.exe").build = false) {
+              startedup = false;
+           }
+          startedup = true;
+        }
+      }
+      
+      void FixedUpdate() {
+        if(startedup == true) {
+          build.provide;
+          RESUME::JD-MAIN
+         }
+      }
+   }
+}

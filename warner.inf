@@ -1,0 +1,5 @@
+#new Window = warning.window
+#if Window = pressed.OK Then
+X!NEW LANG = cfg!X
+>load build.dll
+X!NEW LANG =  normal!X
